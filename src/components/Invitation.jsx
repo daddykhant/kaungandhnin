@@ -9,7 +9,7 @@ export default function Invitation() {
       id="invitation"
       className="relative text-center isolate overflow-hidden bg-stone-50 px-5 py-12 text-stone-900  min-[641px]:max-[768px]:px-10 min-[641px]:max-[768px]:py-[5.5rem]"
     >
-      <FloralAccents variant="invitation" />
+      {/* <FloralAccents variant="invitation" /> */}
       {/* Background photo */}
       <div
         className="absolute inset-0 -z-20 bg-cover bg-no-repeat"
