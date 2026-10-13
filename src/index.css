@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-script: "Great Vibes", cursive;
+  --font-sans: "Montserrat", sans-serif;
+  --color-velvet: #3b0715;
+  --color-gold: #d9b779;
+  --color-cream: #fff6ed;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  margin: 0;
+  background: #3b0715;
+  font-family: "Montserrat", sans-serif;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #d9b779;
+  color: #3b0715;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 700ms cubic-bezier(0.2, 0.75, 0.25, 1),
+    transform 700ms cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-heading > * {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.reveal.is-visible .section-heading > * {
+  animation: detail-in 650ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.reveal.is-visible .section-heading > :nth-child(2) {
+  animation-delay: 90ms;
+}
+
+.reveal.is-visible .section-heading > :nth-child(3) {
+  animation-delay: 160ms;
+}
+
+.countdown-card,
+.calendar-card,
+.detail-card {
+  opacity: 0;
+}
+
+.reveal.is-visible .countdown-card,
+.reveal.is-visible .calendar-card,
+.reveal.is-visible .detail-card {
+  animation: detail-in 700ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.reveal.is-visible .countdown-card:nth-child(1) {
+  animation-delay: 100ms;
+}
+
+.reveal.is-visible .countdown-card:nth-child(2) {
+  animation-delay: 180ms;
+}
+
+.reveal.is-visible .countdown-card:nth-child(3) {
+  animation-delay: 260ms;
+}
+
+.reveal.is-visible .countdown-card:nth-child(4) {
+  animation-delay: 340ms;
+}
+
+.reveal.is-visible .detail-card:nth-child(1) {
+  animation-delay: 100ms;
+}
+
+.reveal.is-visible .detail-card:nth-child(2) {
+  animation-delay: 180ms;
+}
+
+.reveal.is-visible .detail-card:nth-child(3) {
+  animation-delay: 260ms;
+}
+
+.reveal.is-visible .calendar-card {
+  animation-delay: 140ms;
+}
+
+.portrait-card {
+  transition: box-shadow 500ms ease;
+}
+
+.portrait-card img {
+  transition:
+    transform 800ms cubic-bezier(0.2, 0.75, 0.25, 1),
+    filter 500ms ease;
+}
+
+.calendar-day {
+  transition:
+    color 250ms ease,
+    background-color 250ms ease,
+    transform 250ms ease;
+}
+
+.calendar-day--wedding {
+  animation: date-glow 3.2s ease-in-out infinite;
+}
+
+.gift-button,
+button,
+a {
+  transition-timing-function: cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .portrait-card:hover {
+    box-shadow: 0 24px 55px rgb(0 0 0 / 35%);
+  }
+  .portrait-card:hover img {
+    transform: scale(1.06);
+    filter: saturate(1.08);
+  }
+  .calendar-day:not(.calendar-day--wedding):hover {
+    transform: scale(1.16);
+    color: #d9b779;
+  }
+}
+
+.invitation-cover {
+  animation: cover-in 350ms ease-out both;
+}
+
+.invitation-cover.is-closing {
+  animation: cover-out 400ms ease-in both;
+  pointer-events: none;
+}
+
+.cover-content {
+  animation: content-in 800ms 180ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.hero-content {
+  animation: content-in 900ms 180ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.gift-glow {
+  animation: glow-float 6s ease-in-out infinite alternate;
+}
+
+.gift-backdrop {
+  animation: cover-in 220ms ease-out both;
+}
+
+.gift-dialog {
+  animation: dialog-in 420ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes cover-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cover-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes content-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes glow-float {
+  from {
+    opacity: 0.55;
+    transform: translate(-50%, -8px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 18px) scale(1.12);
+  }
+}
+
+@keyframes detail-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes date-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(217 183 121 / 18%);
+  }
+  50% {
+    box-shadow: 0 0 0 7px rgb(217 183 121 / 0%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal,
+  .section-heading > *,
+  .countdown-card,
+  .calendar-card,
+  .detail-card {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-entrance {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-entrance {
+  animation: hero-entrance 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.18s both;
+}
