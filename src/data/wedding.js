@@ -5,7 +5,7 @@ export const wedding = {
     dateLabel: "6 November 2026",
     time: "4:00 PM – 8:00 PM",
     venue: "ဂင်္ဂါဝတီခန်းမ",
-    address: "Pyi, Myanmar",
+    address: "Pyay, Myanmar",
     map: "https://maps.app.goo.gl/hdc52wZHM8fEGnV87?g_st=it",
     email: "your-email@example.com",
     cover: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=90",
