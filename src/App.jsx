@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import { motion, useReducedMotion } from "motion/react";
 
 import InvitationCover from "./components/InvitationCover";
 import Hero from "./components/Hero";
@@ -7,31 +8,14 @@ import Couple from "./components/Couple";
 import Calendar from "./components/Calendar";
 import Countdown from "./components/Countdown";
 import Gifts from "./components/Gifts";
+import Gallery from "./components/Gallery";
+import RSVP from "./components/RSVP";
 import Footer from "./components/Footer";
 
 export default function App() {
   const [coverOpen, setCoverOpen] = useState(false);
   const [coverClosing, setCoverClosing] = useState(false);
-  const sectionsRef = useRef(null);
-
-  useEffect(() => {
-    const sections = sectionsRef.current?.querySelectorAll(".reveal");
-    if (!sections?.length) return undefined;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
-      sections.forEach((section) => section.classList.add("is-visible"));
-      return undefined;
-    }
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08, rootMargin: "0px 0px -32px 0px" });
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
-  }, []);
+  const reduced = useReducedMotion();
 
   function openInvitation() {
     setCoverClosing(true);
@@ -39,15 +23,38 @@ export default function App() {
   }
 
   return (
-    <main className="min-h-screen overflow-hidden bg-velvet text-cream" ref={sectionsRef}>
-      {!coverOpen && <InvitationCover closing={coverClosing} onOpen={openInvitation} />}
+    <main className="mx-auto min-h-screen w-full max-w-3xl overflow-hidden bg-stone-50 text-stone-900 selection:bg-emerald-200 selection:text-emerald-950">
+      {!coverOpen && (
+        <InvitationCover closing={coverClosing} onOpen={openInvitation} />
+      )}
 
-      {[Hero, Invitation, Couple, Countdown, Calendar, Gifts, Footer].map((Section, index) => (
-        <div className="reveal" key={Section.name || index}>
-          <Section />
-        </div>
-      ))}
-
+      {[Hero, Invitation, Couple, Countdown, Calendar, Gifts, Footer].map(
+        (Section, index) => (
+          <motion.div
+            key={Section.name || index}
+            initial={
+              reduced ? false : { opacity: 0, y: 38, filter: "blur(8px)" }
+            }
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+            }}
+            viewport={{
+              once: true,
+              amount: 0.08,
+              margin: "0px 0px -32px 0px",
+            }}
+            transition={{
+              duration: reduced ? 0 : 0.85,
+              delay: reduced ? 0 : index * 0.06,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+          >
+            <Section />
+          </motion.div>
+        ),
+      )}
     </main>
   );
 }
