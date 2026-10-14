@@ -26,7 +26,7 @@ export default function RSVP() {
   return (
     <section
       id="rsvp"
-      className="relative isolate overflow-hidden bg-linear-to-br from-stone-50 via-emerald-50 to-stone-100 px-5 py-24 sm:py-32 min-[641px]:max-[768px]:px-10 min-[641px]:max-[768px]:py-[5.5rem]"
+      className="relative isolate overflow-hidden bg-linear-to-br from-stone-50 via-burgundy-50 to-stone-100 px-5 py-24 sm:py-32 min-[641px]:max-[768px]:px-10 min-[641px]:max-[768px]:py-[5.5rem]"
     >
       <FloralAccents variant="rsvp" />
       <div className="relative z-10">
@@ -81,7 +81,7 @@ export default function RSVP() {
 
         <button
           type="submit"
-          className="flex w-full items-center justify-center gap-3 bg-sage px-6 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-950 transition hover:bg-stone-100"
+          className="flex w-full items-center justify-center gap-3 bg-sage px-6 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-burgundy-950 transition hover:bg-stone-100"
         >
           <Send size={16} /> Send RSVP
         </button>

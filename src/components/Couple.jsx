@@ -17,7 +17,7 @@ export default function Couple() {
   return (
     <section
       id="couple"
-      className="relative isolate overflow-hidden bg-linear-to-br from-stone-50 via-emerald-50 to-stone-100 px-5 py-8 sm:px-8 min-[641px]:max-[768px]:px-10"
+      className="relative isolate overflow-hidden bg-linear-to-br from-burgundy-500 via-burgundy-700 to-burgundy-900 px-5 py-8 sm:px-8 min-[641px]:max-[768px]:px-10"
     >
       <FloralAccents variant="couple" />
 
@@ -44,9 +44,9 @@ export default function Couple() {
                 whileHover={
                   reduced ? undefined : { y: -6, rotate: 0, scale: 1.02 }
                 }
-                className=" border border-sage/15 bg-white/85 p-2 shadow-xl shadow-emerald-950/10 sm:p-3"
+                className=" border border-sage/15 bg-white/85 p-2 shadow-xl shadow-burgundy-950/10 sm:p-3"
               >
-                <div className="overflow-hidden  bg-emerald-50">
+                <div className="overflow-hidden  bg-burgundy-50">
                   <motion.img
                     src={image}
                     alt={`Portrait of ${name}, ${role.toLowerCase()}`}
@@ -60,7 +60,7 @@ export default function Couple() {
             ))}
           </div>
 
-          <div className="rounded-3xl border border-sage/15 bg-white/75 p-5 shadow-lg shadow-emerald-950/5 sm:p-7">
+          <div className="rounded-3xl border border-sage/15 bg-white/75 p-5 shadow-lg shadow-burgundy-950/5 sm:p-7">
             <p className="mb-5 text-center text-xs uppercase tracking-[0.22em] text-sage lg:text-left">
               Wedding day details
             </p>

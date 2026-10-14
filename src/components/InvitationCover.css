@@ -23,12 +23,12 @@
 
 .cover-border-outer {
   inset: 12px;
-  border: 1px solid rgb(113 119 83 / 65%);
+  border: 1px solid rgb(118 43 66 / 65%);
 }
 
 .cover-border-inner {
   inset: 19px;
-  border: 1px solid rgb(113 119 83 / 25%);
+  border: 1px solid rgb(118 43 66 / 25%);
 }
 
 .cover-content {
@@ -44,14 +44,14 @@
   display: flex;
   justify-content: center;
   margin-bottom: 22px;
-  color: #777c5b;
+  color: #762b42;
 }
 
 .cover-eyebrow {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.4em;
-  color: #777c5b;
+  color: #762b42;
 }
 
 .cover-names {
@@ -66,7 +66,7 @@
 .cover-names span {
   display: block;
   margin: 7px 0;
-  color: #777c5b;
+  color: #762b42;
   font-family: Georgia, serif;
   font-size: 0.65em;
   font-style: italic;
@@ -78,20 +78,20 @@
   justify-content: center;
   gap: 12px;
   margin-top: 23px;
-  color: #777c5b;
+  color: #762b42;
 }
 
 .cover-divider span {
   width: 38px;
   height: 1px;
-  background: #777c5b80;
+  background: #762b4280;
 }
 
 .cover-date {
   margin-top: 14px;
   font-size: 12px;
   letter-spacing: 0.35em;
-  color: #555a40;
+  color: #5e2035;
 }
 
 /* Clickable envelope */
@@ -110,7 +110,7 @@
 }
 
 .envelope-button:focus-visible {
-  outline: 2px solid #777c5b;
+  outline: 2px solid #762b42;
   outline-offset: 8px;
   border-radius: 8px;
 }
@@ -152,7 +152,7 @@
   gap: 10px;
   border: 1px solid #c9bd9d;
   background: linear-gradient(145deg, #fffdf6, #f3e8d4);
-  color: #777c5b;
+  color: #762b42;
   font-family: Georgia, serif;
   font-size: clamp(12px, 3vw, 17px);
   font-style: italic;
@@ -212,9 +212,9 @@
   width: 48px;
   aspect-ratio: 1;
   place-items: center;
-  border: 3px double #7c9b77;
+  border: 3px double #5e2035;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 25%, #a9c4a1, #557c5b 72%);
+  background: radial-gradient(circle at 35% 25%, #ad657f, #762b42 72%);
   color: #f8e6cb;
   box-shadow:
     inset 0 0 0 2px rgb(255 220 190 / 20%),
@@ -252,7 +252,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 28px;
-  color: #777c5b;
+  color: #762b42;
 }
 
 .cover-prompt p {
@@ -272,7 +272,7 @@
 
 .cover-bottom-divider {
   margin-top: 24px;
-  color: #777c5b;
+  color: #762b42;
   font-size: 18px;
 }
 
@@ -281,7 +281,7 @@
 .cover-flower {
   position: absolute;
   z-index: -1;
-  color: #858966;
+  color: #91445f;
   font-size: clamp(48px, 9vw, 100px);
   opacity: 0.35;
   pointer-events: none;
@@ -318,7 +318,7 @@
   width: 10px;
   height: 15px;
   border-radius: 80% 15% 80% 20%;
-  background: linear-gradient(145deg, #a9c4a1, #557c5b);
+  background: linear-gradient(145deg, #ad657f, #762b42);
   opacity: 0.65;
   pointer-events: none;
   animation: petal-drift 6s ease-in-out infinite;

@@ -12,7 +12,7 @@ export default function Hero() {
       // style={{ backgroundImage: `url("${wedding.cover}")` }}
     >
       {/* Soft stone and sage overlay */}
-      <div className="absolute inset-0 z-0 bg-linear-to-br from-stone-50 via-emerald-50 to-stone-100" />
+      <div className="absolute inset-0 z-0 bg-linear-to-br from-burgundy-700 via-burgundy-800 to-burgundy-900" />
 
       {/* Decorative border */}
       <motion.div
@@ -38,26 +38,26 @@ export default function Hero() {
           initial={{ opacity: 0, y: -24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-xs uppercase tracking-[0.4em] text-sage"
+          className="text-xs uppercase tracking-[0.4em] text-stone-50"
         >
           We’re getting married
         </motion.p>
 
         {/* Couple's names */}
         <div className="hero-names mt-8 sm:mt-10">
-          <h1 className="font-script text-5xl text-stone-900 sm:text-7xl lg:inline lg:text-[6rem] min-[641px]:max-[768px]:text-[clamp(3.5rem,9vw,4.5rem)]">
+          <h1 className="font-script text-5xl text-stone-100 sm:text-7xl lg:inline lg:text-[6rem] min-[641px]:max-[768px]:text-[clamp(3.5rem,9vw,4.5rem)]">
             {wedding.groom}
           </h1>
 
           <motion.span
             animate={reduced ? undefined : { y: [0, -12, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="mx-3 inline-block font-script text-4xl text-sage sm:mx-6 sm:text-6xl lg:text-[5rem]"
+            className="mx-3 inline-block font-script text-4xl text-stone-100 sm:mx-6 sm:text-6xl lg:text-[5rem]"
           >
             &
           </motion.span>
 
-          <h1 className="font-script text-5xl text-stone-900 sm:text-7xl lg:ml-3 lg:inline lg:text-[6rem] min-[641px]:max-[768px]:text-[clamp(3.5rem,9vw,4.5rem)]">
+          <h1 className="font-script text-5xl text-stone-100 sm:text-7xl lg:ml-3 lg:inline lg:text-[6rem] min-[641px]:max-[768px]:text-[clamp(3.5rem,9vw,4.5rem)]">
             {wedding.bride}
           </h1>
         </div>
@@ -67,7 +67,7 @@ export default function Hero() {
           initial={reduced ? false : { opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: reduced ? 0 : 0.45, duration: 0.75 }}
-          className="mt-8 font-serif text-2xl italic text-stone-900 sm:text-3xl"
+          className="mt-8 font-serif text-2xl italic text-stone-300 sm:text-3xl"
         >
           A celebration of love and togetherness
         </motion.p>
@@ -77,7 +77,7 @@ export default function Hero() {
           initial={reduced ? false : { opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: reduced ? 0 : 0.65, duration: 1 }}
-          className="mt-7 text-sm tracking-[0.25em] text-sage"
+          className="mt-7 text-sm tracking-[0.25em] text-burgundy-300"
         >
           {wedding.dateLabel}
         </motion.p>
@@ -94,7 +94,7 @@ export default function Hero() {
           }}
           className="mx-auto mt-8 flex items-center justify-center gap-3"
         >
-          <img src={bottomflower} alt="Decorative flower" className=" w-48" />
+          <img src={leftflower} alt="Decorative flower" className=" w-48" />
         </motion.div>
       </motion.div>
     </section>

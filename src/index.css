@@ -4,5 +4,16 @@
   --font-serif: "Cormorant Garamond", serif;
   --font-script: "Great Vibes", cursive;
   --font-sans: "Montserrat", sans-serif;
-  --color-sage: #2f6b4f;
+  --color-sage: #762b42;
+  --color-burgundy-50: #f8eef1;
+  --color-burgundy-100: #f0dce3;
+  --color-burgundy-200: #dfbbc8;
+  --color-burgundy-300: #c990a4;
+  --color-burgundy-400: #ad657f;
+  --color-burgundy-500: #91445f;
+  --color-burgundy-600: #762b42;
+  --color-burgundy-700: #5e2035;
+  --color-burgundy-800: #471827;
+  --color-burgundy-900: #32111c;
+  --color-burgundy-950: #210a12;
 }

@@ -23,7 +23,7 @@ export default function App() {
   }
 
   return (
-    <main className="mx-auto min-h-screen w-full max-w-3xl overflow-hidden bg-stone-50 text-stone-900 selection:bg-emerald-200 selection:text-emerald-950">
+    <main className="mx-auto min-h-screen w-full max-w-3xl overflow-hidden bg-stone-50 text-stone-900 selection:bg-burgundy-200 selection:text-burgundy-950">
       {!coverOpen && (
         <InvitationCover closing={coverClosing} onOpen={openInvitation} />
       )}

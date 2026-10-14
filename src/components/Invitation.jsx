@@ -7,7 +7,7 @@ export default function Invitation() {
   return (
     <section
       id="invitation"
-      className="relative text-center isolate overflow-hidden bg-stone-50 px-5 py-12 text-stone-900  min-[641px]:max-[768px]:px-10 min-[641px]:max-[768px]:py-[5.5rem]"
+      className="relative text-center isolate overflow-hidden bg-burgundy-700 px-5 py-12 text-stone-900  min-[641px]:max-[768px]:px-10 min-[641px]:max-[768px]:py-[5.5rem]"
     >
       {/* <FloralAccents variant="invitation" /> */}
       {/* Background photo */}
@@ -22,7 +22,7 @@ export default function Invitation() {
 
       {/* Light sage overlay for text readability */}
       <div
-        className="absolute inset-0 -z-10 bg-gradient-to-br from-stone-50/85 via-emerald-50/75 to-stone-100/85"
+        className="absolute inset-0 -z-10 bg-gradient-to-br from-burgundy-100/85 via-burgundy-100/75 to-burgundy-100/85"
         aria-hidden="true"
       />
 

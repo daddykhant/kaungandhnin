@@ -35,7 +35,7 @@ export default function Countdown() {
   }, []);
 
   return (
-    <section className="relative isolate overflow-hidden px-5 py-12 sm:py-24">
+    <section className="relative isolate overflow-hidden px-5 py-12 sm:py-24 bg-burgundy-700">
       <FloralAccents variant="countdown" />
       <div className="relative z-10">
         <SectionHeading title="Until our forever">
@@ -61,13 +61,13 @@ export default function Countdown() {
                   ? undefined
                   : {
                       y: -7,
-                      borderColor: "rgba(47,107,79,.45)",
+                      borderColor: "rgba(118,43,66,.45)",
                       boxShadow: "0 16px 36px rgba(0,0,0,.12)",
                     }
               }
-              className="rounded-4xl border border-sage/30 bg-black/15 px-2 py-5 text-center sm:py-7"
+              className="rounded-4xl border border-stone-100/30 bg-stone-100/25 px-2 py-5 text-center sm:py-7"
             >
-              <p className="font-serif text-3xl text-sage sm:text-5xl">
+              <p className="font-serif text-3xl text-stone-100 sm:text-5xl">
                 <motion.span
                   key={value}
                   initial={reduced ? false : { y: 10, opacity: 0 }}

@@ -27,7 +27,7 @@ export default function Gallery() {
               className="h-52 w-full object-cover transition duration-700 group-hover:scale-110 sm:h-64 lg:h-80"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/70 to-transparent opacity-70 transition group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-gradient-to-t from-burgundy-950/70 to-transparent opacity-70 transition group-hover:opacity-100" />
 
             <div className="absolute bottom-4 left-4 text-sage">
               {index === 0 ? <Camera size={18} /> : <Heart size={18} />}

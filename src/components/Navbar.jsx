@@ -34,7 +34,7 @@ export default function Navbar({ musicPlaying, onToggleMusic }) {
           <button
             onClick={onToggleMusic}
             aria-label="Toggle music"
-            className="border border-sage/40 p-2.5 text-sage hover:bg-sage hover:text-emerald-950"
+            className="border border-sage/40 p-2.5 text-sage hover:bg-sage hover:text-burgundy-950"
           >
             {musicPlaying ? <Volume2 size={16} /> : <VolumeX size={16} />}
           </button>

@@ -17,7 +17,7 @@ export default function SectionHeading({ label, title, children }) {
       <motion.p
         variants={item}
         transition={{ duration: 0.65 }}
-        className="mb-2 text-xs uppercase tracking-[0.35em] text-sage"
+        className="mb-2 text-xs uppercase tracking-[0.35em] text-stone-100"
       >
         {label}
       </motion.p>
@@ -25,7 +25,7 @@ export default function SectionHeading({ label, title, children }) {
       <motion.h2
         variants={item}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className="text-balance font-serif text-3xl text-stone-900 sm:text-5xl md:text-6xl"
+        className="text-balance font-serif text-3xl text-stone-100 sm:text-5xl md:text-6xl"
       >
         {title}
       </motion.h2>
@@ -34,7 +34,7 @@ export default function SectionHeading({ label, title, children }) {
         <motion.p
           variants={item}
           transition={{ duration: 0.65 }}
-          className="mx-auto mt-3 max-w-xl text-sm leading-7 text-stone-900/65"
+          className="mx-auto mt-3 max-w-xl text-sm leading-7 text-stone-100/65"
         >
           {children}
         </motion.p>
